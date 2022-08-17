@@ -13,6 +13,9 @@
             <% end %>
             <p class="card-text"><%= flat.price_per_night %> <i class="fa-solid fa-euro-sign"></i></p>
             <p class="card-text"><%= flat.number_of_guests %> <i class="fa-solid fa-people-roof"></i></p>
+            <%= link_to flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              <p class="card-text"><i class="fa-solid fa-dumpster"></i></p>
+            <% end %>
           </div>
         </div>
       </div>
